@@ -20,7 +20,7 @@ def process_and_predict(image_file):
     #Interpret the result
     if prediction[0] > 0.5:
         label = "DOG"
-        confidence = float(prediction[0])
+        confidence = float(prediction[0][0])
     else:
         label = "CAT"
         confidence = float(1 - prediction[0][0])
