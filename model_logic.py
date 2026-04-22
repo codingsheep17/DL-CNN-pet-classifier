@@ -23,6 +23,6 @@ def process_and_predict(image_file):
         confidence = float(prediction[0])
     else:
         label = "CAT"
-        confidence = float(1 - prediction[0])
+        confidence = float(1 - prediction[0][0])
         
     return label, confidence
